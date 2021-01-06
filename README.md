@@ -1,5 +1,5 @@
 # PyMP
-An mp3 music player interface for Python
+An MP3 music player interface for Python
 
 ### Installation
 Install via `pip`
@@ -29,4 +29,4 @@ mp = MusicPlayer()
 * `choose_song(index)` - Load song at index in queue
 * `next_song()` - Load next song in queue
 * `previous_song()` - Load previous song in queue
-* `skip(amount)` - Skip amount (in milliseconds) in music (positive number for forward, negative number for rewind)
+* `skip(amount)` - Skip amount (in milliseconds) in music (positive for forward, negative for rewind)

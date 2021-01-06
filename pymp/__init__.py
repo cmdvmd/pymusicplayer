@@ -1,1 +1,1 @@
-from pymp.music_player import MusicPlayer
+from .music_player import MusicPlayer
