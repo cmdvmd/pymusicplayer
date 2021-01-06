@@ -1,16 +1,17 @@
-# PyMP
+# PyMP3
 An MP3 music player interface for Python
 
 ### Installation
 Install via `pip`
 
 ```
-$ pip install pymp
+$ pip install pymp3
 ```
 
 ## Usage
+
 ```python
-from pymp import MusicPlayer
+from pymp3 import MusicPlayer
 
 mp = MusicPlayer()
 ```

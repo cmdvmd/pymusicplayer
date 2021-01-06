@@ -4,7 +4,7 @@ with open('README.md', 'r') as file:
     readme = file.read()
 
 setuptools.setup(
-    name='pymp',
+    name='pymp3',
     version='0.0.1',
     author='cmdvmd',
     description='An MP3 music player interface',
