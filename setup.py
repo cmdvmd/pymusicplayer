@@ -5,7 +5,7 @@ with open('README.md', 'r') as file:
 
 setuptools.setup(
     name='PyMusicPlayer',
-    version='0.0.1',
+    version='1.0.0',
     author='cmdvmd',
     description='An MP3 music player interface',
     long_description=readme,
