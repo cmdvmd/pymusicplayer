@@ -110,5 +110,11 @@ class MusicPlayer:
     def rewind(self):
         self.set_pos(0)
 
+    def get_volume(self):
+        return music.get_volume()*100
+
+    def set_volume(self, volume):
+        music.set_volume(volume/100)
+
 
 init()

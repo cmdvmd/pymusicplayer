@@ -1,6 +1,12 @@
 # PyMP3
 An MP3 music player interface for Python
 
+![Downloads](https://img.shields.io/pypi/dm/pymp3?style=flat-square)
+![License](https://img.shields.io/pypi/l/pymp3?style=flat-square)
+![Version](https://img.shields.io/pypi/v/pymp3?label=version&style=flat-square)
+![Format](https://img.shields.io/pypi/format/pymp3?style=flat-square)
+![Last Update](https://img.shields.io/github/last-commit/cmdvmd/pymp3?style=flat-square)
+
 ### Installation
 Install via `pip`
 
@@ -25,6 +31,8 @@ mp = MusicPlayer()
 * `play()` - Start playing loaded music
 * `pause()` - Pause loaded music
 * `restart()` - Restart loaded music
+* `get_volume()` - Returns volume of music
+* `set_volume(volume)` - Sets volume of music to value in interval [0, 100]
 * `get_pos()` - Get current position of loaded music in milliseconds
 * `set_pos(pos)` - Set position of loaded music in milliseconds
 * `choose_song(index)` - Load song at index in queue
