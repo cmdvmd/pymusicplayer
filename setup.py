@@ -4,7 +4,7 @@ with open('README.md', 'r') as file:
     readme = file.read()
 
 setuptools.setup(
-    name='pymp3',
+    name='pymusicplayer',
     version='0.0.1',
     author='cmdvmd',
     description='An MP3 music player interface',
@@ -13,9 +13,11 @@ setuptools.setup(
     url='https://github.com/cmdvmd/py-music-player',
     packages=setuptools.find_packages(),
     classifiers=[
+        'Programming Language :: Python',
         'Programming Language :: Python :: 3',
         'License :: OSI Approved :: MIT License',
-        'Topic :: Multimedia :: Sound/Audio :: Players :: MP3',
+        'Topic :: Multimedia :: Sound/Audio',
+        'Topic :: Multimedia :: Sound/Audio :: Players',
         'Topic :: Software Development :: Libraries :: pygame'
     ]
 )
