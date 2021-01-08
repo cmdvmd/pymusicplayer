@@ -1,4 +1,4 @@
-# pymusicplayer
+# PyMusicPlayer
 ![Downloads](https://img.shields.io/pypi/dm/pymusicplayer?style=flat-square)
 ![License](https://img.shields.io/pypi/l/pymusicplayer?style=flat-square)
 ![Version](https://img.shields.io/pypi/v/pymusicplayer?label=version&style=flat-square)
