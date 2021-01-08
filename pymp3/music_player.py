@@ -1,29 +1,6 @@
-from io import BytesIO
 from pygame.mixer import init, music
-from mutagen.mp3 import MP3
 from random import shuffle
-
-
-class Song:
-    def __init__(self, name, contents):
-        self.__name = name
-        self.__contents = contents
-        self.__length = int(MP3(self.__get_io()).info.length*MusicPlayer.conversion)
-
-    def __get_io(self):
-        return BytesIO(self.__contents)
-
-    def get_name(self):
-        return self.__name
-
-    def get_length(self):
-        return self.__length
-
-    def prepare(self):
-        music.unload()
-        music.load(self.__get_io())
-        music.play(0)
-        music.pause()
+from .song import Song
 
 
 class MusicPlayer:
@@ -33,7 +10,7 @@ class MusicPlayer:
     def __init__(self):
         self.__queue = []
         self.__current_song = -1
-        self.__is_playing = False
+        self.__loop_queue = True
         self.__offset = 0
         self.__instantiated += [self]
 
@@ -59,13 +36,19 @@ class MusicPlayer:
             queue += [song.get_name()]
         return queue
 
+    def get_loop_queue(self):
+        return self.__loop_queue
+
+    def set_loop_queue(self, loop_queue):
+        self.__loop_queue = loop_queue
+
     def shuffle(self):
         if len(self.__queue) > 1:
             shuffle(self.__queue)
             self.__current_song = 0
 
     def is_playing(self):
-        return self.__is_playing
+        return music.get_busy()
 
     def get_pos(self):
         return music.get_pos()+self.__offset
@@ -78,6 +61,9 @@ class MusicPlayer:
         return self.__queue[self.__current_song].get_name()
 
     def choose_song(self, index):
+        if self.__loop_queue:
+            index %= len(self.__queue)
+
         if index >= len(self.__queue):
             self.__current_song = 0
         elif index < 0:
@@ -101,11 +87,9 @@ class MusicPlayer:
         for mp in self.__instantiated:
             mp.pause()
         music.unpause()
-        self.__is_playing = True
 
     def pause(self):
         music.pause()
-        self.__is_playing = False
 
     def rewind(self):
         self.set_pos(0)

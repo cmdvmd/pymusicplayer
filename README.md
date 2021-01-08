@@ -26,6 +26,8 @@ mp = MusicPlayer()
 * `remove_song(index)` - Remove song at index of queue
 * `get_current_song()` - Return name of currently loaded song
 * `get_queue()` - Return names of songs in queue
+* `get_loop_queue()` - Return if queue will loop
+* `set_loop_queue()` - Set if queue should loop
 * `shuffle()` - Shuffle songs in queue
 * `is_playing()` - Return if music is currently playing
 * `play()` - Start playing loaded music
