@@ -1,23 +1,23 @@
-# PyMP3
-An MP3 music player interface for Python
+# pymusicplayer
+![Downloads](https://img.shields.io/pypi/dm/pymusicplayer?style=flat-square)
+![License](https://img.shields.io/pypi/l/pymusicplayer?style=flat-square)
+![Version](https://img.shields.io/pypi/v/pymusicplayer?label=version&style=flat-square)
+![Format](https://img.shields.io/pypi/format/pymusicplayer?style=flat-square)
+![Last Update](https://img.shields.io/github/last-commit/cmdvmd/pymusicplayer?style=flat-square)
 
-![Downloads](https://img.shields.io/pypi/dm/pymp3?style=flat-square)
-![License](https://img.shields.io/pypi/l/pymp3?style=flat-square)
-![Version](https://img.shields.io/pypi/v/pymp3?label=version&style=flat-square)
-![Format](https://img.shields.io/pypi/format/pymp3?style=flat-square)
-![Last Update](https://img.shields.io/github/last-commit/cmdvmd/pymp3?style=flat-square)
+An MP3 music player interface for Python with builtin playback and queue functionality built using [Pygame mixer](https://www.pygame.org/docs/ref/music.html)
 
 ### Installation
 Install via `pip`
 
 ```
-$ pip install pymp3
+$ pip install pymusicplayer
 ```
 
 ## Usage
 
 ```python
-from pymp3 import MusicPlayer
+from pymusicplayer import MusicPlayer
 
 mp = MusicPlayer()
 ```
