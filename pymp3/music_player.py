@@ -15,9 +15,7 @@ class MusicPlayer:
         self.__instantiated += [self]
 
     def add_song(self, filename, song_name=None):
-        with open(filename, 'rb') as song:
-            song = Song(song_name if song_name is not None else filename, song.read())
-        self.__queue += [song]
+        self.__queue += [Song(filename, song_name if song_name is not None else filename)]
         if len(self.__queue) == 1:
             self.next_song()
 
